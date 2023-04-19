@@ -1,0 +1,76 @@
+:root
+{
+    --landscape-size: 20vh;
+    --portait-size: 20vh;
+    --font-reduction: 0.8;
+    --hover-color: rgb(182, 145, 97);
+}
+
+*
+{
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+body
+{
+    width: 100%;
+}
+.header
+{
+    text-align: center; 
+}
+
+
+
+#reset-button 
+{
+    visibility: hidden;
+    text-align: center;
+}
+
+#reset-button button
+{
+    font-size: 1.5em; 
+}
+
+
+table
+{
+    margin-inline: auto;
+    background-color: tan;
+    border-collapse: collapse;
+}
+
+td
+{
+    color: black;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.cell:empty:hover
+{
+    background-color: var(--hover-color);
+    cursor: pointer;
+}
+
+@media (orientation: portrait)
+{
+    td
+    {
+        width: var(--portrait-size);
+        height: var(--portrait-size);
+        font-size: calc(var(--font-reduction) * var(--portrait-size));
+    }
+}
+@media (orientation: landscape)
+{
+    td
+    {
+        width: var(--landscape-size);
+        height: var(--landscape-size);
+        font-size: calc(var(--font-reduction) * var(--landscape-size));
+    }
+}
